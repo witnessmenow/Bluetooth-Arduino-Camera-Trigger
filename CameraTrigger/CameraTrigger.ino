@@ -34,7 +34,7 @@ void setup() {
 
   pinMode(BUTTON, INPUT_PULLUP);
 
-  BPMod = new BPLib(Serial);
+  BPMod = new BPLib(swSer);
 
   if (doubleResetDetected) {
     BPMod->begin(BP_MODE_HID,BP_HID_KEYBOARD);
